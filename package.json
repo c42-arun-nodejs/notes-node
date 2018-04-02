@@ -1,0 +1,22 @@
+{
+  "name": "notes-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c42-arun-nodejs/notes-node.git"
+  },
+  "author": "Arunkumar Ramachandriya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c42-arun-nodejs/notes-node/issues"
+  },
+  "homepage": "https://github.com/c42-arun-nodejs/notes-node#readme",
+  "dependencies": {
+    "yargs": "^11.0.0"
+  }
+}
