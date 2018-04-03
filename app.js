@@ -19,7 +19,12 @@ if (command === 'add') {
         console.log('Note title taken');
     }
 } else if (command === 'list') {
-    notes.getAll();
+    var allNotes = notes.getAll();
+
+    console.log(`Fetched ${allNotes.length} note(s).`);
+
+    allNotes.forEach(n => notes.logNote(n)); 
+
 } else if (command === 'read') {
     var note = notes.getNote(argv.title);
 
