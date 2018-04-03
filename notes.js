@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-var readNotes = () => {
+var fetchNotes = () => {
     try {
         var notesString = fs.readFileSync('notes-data.json');
         return JSON.parse(notesString);
@@ -14,7 +14,7 @@ var saveNotes = (notes) => {
 };
 
 var addNote = (title, body) => {
-    var notes = readNotes();
+    var notes = fetchNotes();
     var note = {
         title,
         body
@@ -38,7 +38,22 @@ var getNote = (title) => {
 };
 
 var removeNote = (title) => {
-    console.log(`Removing note with title '${title}'`)
+    var notes = fetchNotes();
+
+    // var index = notes.findIndex(n => n.title === title);
+
+    // if (index === -1) {
+    //     return false;
+    // } else {
+    //     notes.splice(index, 1);
+    //     saveNotes(notes);
+    //     return true;
+    // }
+
+    var filteredNotes = notes.filter(n => n.title !== title);
+    saveNotes(filteredNotes);
+
+    return notes.length !== filteredNotes.length;
 };
 
 module.exports = {
