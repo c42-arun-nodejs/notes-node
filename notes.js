@@ -7,7 +7,7 @@ var getAll = () => {
     console.log("Getting all notes...");
 };
 
-var readNote = (title) => {
+var getNote = (title) => {
     console.log(`Reading note with title '${title}'`);
 };
 
@@ -18,6 +18,6 @@ var removeNote = (title) => {
 module.exports = {
     addNote,
     getAll,
-    readNote,
+    getNote,
     removeNote
 };
