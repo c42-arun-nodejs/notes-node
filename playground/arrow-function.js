@@ -34,7 +34,10 @@ user.sayHi2(); // prints "Hi, I'm Arun"
 
 
 
-/** 'arguments' array bind (i.e an array like object)*/
+/** 'arguments' keyword bind 
+ * in a non-ES6 arrow function, this returns the arguments passed to the function as an array like object
+ * whereas in an arrow function, this returns the arguments passed to the global application i.e program arguments
+*/
 var user2 = {
     name: 'Arun',
     sayHi: () => {
